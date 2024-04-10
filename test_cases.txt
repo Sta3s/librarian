@@ -6,18 +6,38 @@ piem. Zinot ka kurss ir 1.0831, padodot 10 eur, rezultāts būs 10.83 usd
 -----
 
 2 veiksmīgi scenāriji (happy path):
+Ir zināms, ka lielākā grāmata pēc lappuses ir Ten Years of UserFriendly.Org, noklikšķinot uz kārtot pēc lapas, pirmā grāmata būs Ten Years of UserFriendly.Org (1096 lapas)
+
+Ir zināms, ka ir grāmata Unlocking Android, meklējot daļu no nosaukuma Unl, rezultāts būs 1933988673 - Unlocking Android by W. Frank Ebleson, Charlie Collins, Robi Sen
+
+4 izmantošanas scenāriji (use-case):
+Ir zināms, ka Flex on Java grāmata tiek ņemta, atzīmējot tās isbn kā "paņemts", mēs iegūstam rezultātu Book 'Flex on Java' atzīmēts kā ņemts.
+
+Ir zināms, ka grāmata Coffeehouse ir bezmaksas, atzīmējot tās isbn kā "bezmaksas", mēs iegūstam rezultātu Grāmata 'Coffeehouse' atzīmēta kā bezmaksas.
+ 
+Ir zināms, ka ir grāmata Brownfield Application Development in .NET, meklējot daļu no nosaukuma APPLICATION DEVELOPMENT, mēs iegūstam rezultātu 1933988711 - Brownfield Application Development in .NET by Kyle Beley, Donald Belcham
+
+
+Ir zināms, ka vēlamies pievienot grāmatu Stas, kuru sarakstījis Stas un ar 455 lappusēm un numuru Xffr4, kas sarakstīta 2007. gada 7. jūlijā un bez apraksta, ievadot jaunu grāmatu ar šiem datiem iegūstam Grāmata veiksmīgi pievienota.
 
 
 
-5 izmantošanas scenāriji (use-case):
 
+4 robežas scenāriji (edge-case):
+Ir zināms, ka ir 7 iespējas, ievadot opcijas numuru 8, mēs saņemam Invalid choice. Lūdzu, ievadiet skaitli no 1 līdz 7.
 
+Ir zināms, ka ir grāmata Coffeehouse, ievadot “Coffee House” krievu valodā, mēs saņemam Nav atrasta atbilstoša grāmata.
 
+Ir zināms, ka mēs vēlamies pievienot grāmatu, kas jau pastāv, ievadot šādus datus, mēs saņemam Grāmatas pievienošanu veiksmīgi.
 
-
-
-5 robežas scenāriji (edge-case):
-
+Ir zināms, ka mēs vēlamies pievienot grāmatu, bet nezinām neko citu kā nosaukumu, ievadot tikai šo, mēs saņemam
+Traceback (most recent call last):
+  File "c:\Users\sbernatovics3\Desktop\librarian\library.py", line 94, in <module>
+    add_book(books)
+  File "c:\Users\sbernatovics3\Desktop\librarian\library.py", line 15, in add_book
+    pageCount = int(input("Enter page count: "))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
 
 
 
